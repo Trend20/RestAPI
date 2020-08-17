@@ -11,4 +11,7 @@ app.get('/api/courses', (req, res) =>{
 });
 
 // port
-app.listen(3000, () =>console.log('Listening to port 3000...'));
+
+// replacing the port ith an environment variable
+const port = process.env.PORT || 3000
+app.listen(port, () =>console.log(`Listening to port ${port}...`));
