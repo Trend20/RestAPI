@@ -8,6 +8,7 @@ const courses=[
 ]
 
 // ROUTES
+// get requests
 app.get('/', (req,res) =>{
    res.send('We are on home page');
 });
@@ -21,6 +22,9 @@ app.get('/api/courses/:id', (req, res) =>{
    if(!course) res.status(404).send('Course Not Found');
    res.send(course);
 });
+
+// post request
+
 
 // port
 
